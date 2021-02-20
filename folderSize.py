@@ -22,8 +22,8 @@ def size():
 
 
 print("""Type byext to organize by their extension
-        Type bydate to organize by their date
-        Type fsize to know file size""")
+        Type bydate to organize by their Date and time
+        Type fsize to know total folder size""")
 
 
 op = input("ENTER YOUR OPTION:-")

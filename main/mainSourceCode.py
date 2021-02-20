@@ -7,6 +7,10 @@ import math
 
 from datetime import datetime
 
+print("WELCOME TO JUNK FILE ORGANISER")
+print("PROGRAME BY - ATUL KUMAR")
+print("FEATURES")
+
 # this function is used to sort files by extension
 
 
@@ -166,12 +170,30 @@ def checkFIle(fileName):
         return True
     return False
 
+
+    # this function is used to know the size
+def size():
+
+    path = input("enter your directory path:-")
+    size = 0
+    fsizedicr = {'Megabytes': float(
+        1)/(1024*1024)}
+    for (path, dirs, files) in os.walk(path):
+        for file in files:
+            filename = os.path.join(path, file)
+            size += os.path.getsize(filename)
+    for key in fsizedicr:
+        if(key == "Megabytes"):
+            print("Folder Size: " + str(round(fsizedicr[key]*size, 2)) + " MB")
+
+
 if __name__ == "__main__":
 
 
     print("""           Type "bytype" to organize by their extension
-            Type "bydate" to organize by their date
-             Type "size" to know file size""")
+                Type "bydate" to organize by their date and time
+                Type "size" to know file size
+                Type "fsize" to know total folder size""")
 
 
     op = input("ENTER YOUR OPTION:-")
@@ -187,6 +209,10 @@ if __name__ == "__main__":
 
     elif op == "size":
         organizeBySize()
+        print("ORGANISED by size")
+
+    if op == "fsize":
+        size()
         print("ORGANISED by size")
 
         

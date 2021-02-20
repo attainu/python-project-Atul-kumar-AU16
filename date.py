@@ -46,9 +46,9 @@ def bydate():
 if __name__ == "__main__":
 
 
-    print("""           Type "bytype" to organize by their extension
+    print("""           
             Type "bydate" to organize by their date
-             Type "size" to know file size""")
+             """)
 
 
     op = input("ENTER YOUR OPTION:-")
